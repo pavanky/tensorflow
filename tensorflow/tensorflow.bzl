@@ -290,7 +290,7 @@ def tf_cc_shared_object(
     name,
     srcs=[],
     deps=[],
-    linkopts=[],
+    linkopts=["-lrt"],
     framework_so=tf_binary_additional_srcs(),
     **kwargs):
   native.cc_binary(
@@ -1324,7 +1324,7 @@ register_extension_info(
 )
 
 def tf_extension_linkopts():
-  return []  # No extension link opts
+  return ["-lrt"]  # No extension link opts
 
 def tf_extension_copts():
   return []  # No extension c opts
