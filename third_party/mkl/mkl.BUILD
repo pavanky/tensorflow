@@ -28,3 +28,9 @@ filegroup(
     srcs = ["lib/libiomp5.so"],
     visibility = ["//visibility:public"],
 )
+
+filegroup(
+    name = "libdl.so",
+    srcs = ["lib/libdl.so"],
+    visibility = ["//visibility:public"],
+)
